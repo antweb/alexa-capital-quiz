@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class CapitalQuizSpeechlet implements Speechlet {
 
-    private final int NUM_COUNTRIES = 9;
+    private final int NUM_COUNTRIES = 51;
 
     private static final String[] countries = {
             "Albania",
@@ -24,7 +24,49 @@ public class CapitalQuizSpeechlet implements Speechlet {
             "Belarus",
             "Belgium",
             "Bosnia and Herzegovina",
-            "Bulgaria"
+            "Bulgaria",
+            "Croatia",
+            "Cyprus",
+            "Czech Republic",
+            "Denmark",
+            "Estonia",
+            "Finland",
+            "France",
+            "Georgia",
+            "Germany",
+            "Greece",
+            "Hungary",
+            "Iceland",
+            "Ireland",
+            "Italy",
+            "Kazakhstan",
+            "Kosovo",
+            "Latvia",
+            "Liechtenstein",
+            "Lithuania",
+            "Luxembourg",
+            "Macedonia",
+            "Malta",
+            "Moldova",
+            "Monaco",
+            "Montenegro",
+            "Netherlands",
+            "Norway",
+            "Poland",
+            "Portugal",
+            "Romania",
+            "Russia",
+            "San Marino",
+            "Serbia",
+            "Slovakia",
+            "Slovenia",
+            "Spain",
+            "Sweden",
+            "Switzerland",
+            "Turkey",
+            "Ukraine",
+            "United Kingdom",
+            "Vatican City"
     };
 
     private static final Map<String, String> capitals = new HashMap<String, String>();
@@ -38,6 +80,48 @@ public class CapitalQuizSpeechlet implements Speechlet {
         capitals.put("Belgium", "Brussels");
         capitals.put("Bosnia and Herzegovina", "Sarajevo");
         capitals.put("Bulgaria", "Sofia");
+        capitals.put("Croatia", "Zagreb");
+        capitals.put("Cyprus", "Nicosia");
+        capitals.put("Czech Republic", "Prague");
+        capitals.put("Denmark", "Copenhagen");
+        capitals.put("Estonia", "Tallinn");
+        capitals.put("Finland", "Helsinki");
+        capitals.put("France", "Paris");
+        capitals.put("Georgia", "Tbilisi");
+        capitals.put("Germany", "Berlin");
+        capitals.put("Greece", "Athens");
+        capitals.put("Hungary", "Budapest");
+        capitals.put("Iceland", "Reykjavik");
+        capitals.put("Ireland", "Dublin");
+        capitals.put("Italy", "Rome");
+        capitals.put("Kazakhstan", "Astana");
+        capitals.put("Kosovo", "Pristina");
+        capitals.put("Latvia", "Riga");
+        capitals.put("Liechtenstein", "Vaduz");
+        capitals.put("Lithuania", "Vilnius");
+        capitals.put("Luxembourg", "Luxembourg");
+        capitals.put("Macedonia", "Skopje");
+        capitals.put("Malta", "Valletta");
+        capitals.put("Moldova", "Chisinau");
+        capitals.put("Monaco", "Monaco");
+        capitals.put("Montenegro", "Podgorica");
+        capitals.put("Netherlands", "Amsterdam");
+        capitals.put("Norway", "Oslo");
+        capitals.put("Poland", "Warsaw");
+        capitals.put("Portugal", "Lisbon");
+        capitals.put("Romania", "Bucharest");
+        capitals.put("Russia", "Moscow");
+        capitals.put("San Marino", "San Marino");
+        capitals.put("Serbia", "Belgrade");
+        capitals.put("Slovakia", "Bratislava");
+        capitals.put("Slovenia", "Ljubljana");
+        capitals.put("Spain", "Madrid");
+        capitals.put("Sweden", "Stockholm");
+        capitals.put("Switzerland", "Bern");
+        capitals.put("Turkey", "Ankara");
+        capitals.put("Ukraine", "Kyiv");
+        capitals.put("United Kingdom", "London");
+        capitals.put("Vatican City", "Vatican City");
     }
 
     @Override
