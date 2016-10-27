@@ -1,0 +1,6 @@
+StartIntent start
+StartIntent start a new quiz
+StartIntent start a new game
+AnswerIntent {City}
+AnswerIntent the answer is {City}
+AnswerIntent the capital is {City}

@@ -1,0 +1,16 @@
+{
+  "intents": [
+    {
+      "intent": "StartIntent"
+    },
+    {
+      "intent": "AnswerIntent",
+      "slots": [
+        {
+          "name": "City",
+          "type": "LIST_OF_CITIES"
+        }
+      ]
+    }
+  ]
+}
