@@ -266,10 +266,17 @@ public class CapitalQuizSpeechlet implements Speechlet {
     private SpeechletResponse getHelpResponse() {
         String text = "This is a quiz, in which I will name a series of countries" +
                 "for which you will have to guess the capital city. " +
-                "Whenever you're ready, say start.";
+                "Whenever you're ready, just ask me to start a new game.";
 
         PlainTextOutputSpeech response = new PlainTextOutputSpeech();
         response.setText(text);
-        return SpeechletResponse.newTellResponse(response);
+
+        String repromptText = "Whenever you're ready, just ask me to start a new game.";
+        Reprompt reprompt = new Reprompt();
+        PlainTextOutputSpeech repromptSpeech = new PlainTextOutputSpeech();
+        repromptSpeech.setText(repromptText);
+        reprompt.setOutputSpeech(repromptSpeech);
+
+        return SpeechletResponse.newAskResponse(response, reprompt);
     }
 }
