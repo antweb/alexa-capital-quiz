@@ -136,7 +136,7 @@ public class CapitalQuizSpeechlet implements Speechlet {
     public SpeechletResponse onLaunch(LaunchRequest launchRequest, Session session) throws SpeechletException {
         String text = "During this quiz, I will name a series of countries" +
                         "for which you will have to guess the capital city. " +
-                        "Whenever you're ready, say start.";
+                        "Ready when you are.";
         PlainTextOutputSpeech response = new PlainTextOutputSpeech();
         response.setText(text);
 
@@ -158,6 +158,12 @@ public class CapitalQuizSpeechlet implements Speechlet {
             return getStartResponse(intentRequest, session);
         } else if ("AnswerIntent".equals(intentName)) {
             return getAnswerResponse(intentRequest, session);
+        } else if ("AMAZON.StopIntent".equals(intentName)) {
+            return getStopResponse();
+        } else if ("AMAZON.CancelIntent".equals(intentName)) {
+            return getStopResponse();
+        } else if ("AMAZON.HelpIntent".equals(intentName)) {
+            return getHelpResponse();
         } else {
             PlainTextOutputSpeech response = new PlainTextOutputSpeech();
             response.setText("Could you repeat that?");
@@ -249,5 +255,21 @@ public class CapitalQuizSpeechlet implements Speechlet {
         } else {
             return score.toString();
         }
+    }
+
+    private SpeechletResponse getStopResponse() {
+        PlainTextOutputSpeech response = new PlainTextOutputSpeech();
+        response.setText("Okay, bye.");
+        return SpeechletResponse.newTellResponse(response);
+    }
+
+    private SpeechletResponse getHelpResponse() {
+        String text = "This is a quiz, in which I will name a series of countries" +
+                "for which you will have to guess the capital city. " +
+                "Whenever you're ready, say start.";
+
+        PlainTextOutputSpeech response = new PlainTextOutputSpeech();
+        response.setText(text);
+        return SpeechletResponse.newTellResponse(response);
     }
 }
